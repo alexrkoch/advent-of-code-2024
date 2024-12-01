@@ -1,3 +1,4 @@
+import executeWithTimer from "../../utils/executeWithTimer";
 import day1input from "./input.txt";
 const typedInput = day1input as string;
 
@@ -6,8 +7,8 @@ interface SplitList {
 	right: number[];
 }
 
-console.log("part 1 solution is:", day1part1(typedInput));
-console.log("part 2 solution is:", day1part2(typedInput));
+console.log("part 1 solution is:", executeWithTimer(day1part1, typedInput));
+console.log("part 2 solution is:", executeWithTimer(day1part2, typedInput));
 
 export function day1part1(rawInput: string): number {
 	const splitInput = splitInputLeftRight(rawInput);
